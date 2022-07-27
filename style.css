@@ -3,6 +3,8 @@
   }
   li {
     padding-top: 2%;
+    cursor: pointer;
+    text-decoration: line-through;
   }
   li:hover{
     background-color: gray;

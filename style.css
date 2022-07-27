@@ -1,3 +1,12 @@
 #minhaLista {
     list-style-type: none;
   }
+  li {
+    padding-top: 2%;
+  }
+  li:hover{
+    background-color: gray;
+  }
+  main {
+    text-align: center;
+  }

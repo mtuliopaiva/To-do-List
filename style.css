@@ -4,7 +4,8 @@
   li {
     padding-top: 2%;
     cursor: pointer;
-    text-decoration: line-through;
+    font-size: 2rem;
+    
   }
   li:hover{
     background-color: gray;

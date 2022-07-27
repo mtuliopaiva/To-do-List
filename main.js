@@ -6,7 +6,7 @@ var ul = document.querySelector("#minhaLista");//minha lista existente
 var li = document.createElement("li");
 
 
-document.querySelector(".adicionar").addEventListener("click", (event) => {
+document.querySelector(".adicionar").addEventListener("click", () => {
     temp = minhaTarefa.value;
     var li = document.createElement("li"); //cria um elemento
 
@@ -25,8 +25,7 @@ document.querySelector(".adicionar").addEventListener("click", (event) => {
     function mapear(){ // Função que mapeia a lista
     for(let cont=0; cont < elemento.childElementCount; cont++){
       elemento.children[cont].onclick = function(){
-        elemento.children[cont].style.color = "red" //altera a cor do elemento da lista clicado
-        console.log(elemento.children[cont]);
+        elemento.children[cont].style.textDecoration = "line-through" //altera a text decoration do elemento da lista clicado para riscada
         }
       }
     }

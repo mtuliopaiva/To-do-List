@@ -23,9 +23,18 @@ document.querySelector(".adicionar").addEventListener("click", () => {
   });
     
     function mapear(){ // Função que mapeia a lista
-    for(let cont=0; cont < elemento.childElementCount; cont++){
-      elemento.children[cont].onclick = function(){
-        elemento.children[cont].style.textDecoration = "line-through" //altera a text decoration do elemento da lista clicado para riscada
+      for(let cont=0; cont < elemento.childElementCount; cont++){
+        if(elemento.children[cont].style.textDecoration == "line-through"){
+
+          elemento.children[cont].onclick = function(){
+            elemento.children[cont].style.textDecoration = "none";
+          }
         }
+        else{
+          elemento.children[cont].onclick = function(){
+            elemento.children[cont].style.textDecoration = "line-through" //altera a text decoration do elemento da lista clicado para riscada
+          }
+        }
+      
       }
     }

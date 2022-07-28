@@ -5,18 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To do list</title>
+    <link href="./assets/css/normalize.css" rel="stylesheet" />
+    <link href="./assets/css/reset.css" rel="stylesheet" />
     <link rel="stylesheet" href="./style.css">
 </head>
 <body> 
     <main> 
-        <h1>Minhas tarefas</h1>
-        <input type="text" id="tarefa" required placeholder="Digite aqui sua tarefa">
-        <button class="adicionar" onclick="mapear()">Adicionar</button>
-            
+        <section class="cardTarefas">
+            <h1 class="meuTitulo">Minhas tarefas</h1>
+            <input type="text" id="tarefa" required placeholder="Digite aqui sua tarefa">
+            <button class="adicionar">Adicionar</button>
+                
 
-        <ul id="minhaLista">
-        </ul>
-        <button class="limpar">Limpar</button>
+            <ul id="minhaLista">
+            </ul>
+            <button class="limpar">Limpar</button>
+        </section>
 
         <script src="./main.js"></script>   
     </main>  

@@ -1,19 +1,22 @@
 const minhaTarefa = document.querySelector('input[type=text]'); //meu texto
-var temp;
 const elemento = document.getElementById('minhaLista');
 
 var ul = document.querySelector("#minhaLista");//minha lista existente
-var li = document.createElement("li");
 
 
 document.querySelector(".adicionar").addEventListener("click", () => {
-    temp = minhaTarefa.value;
-    var li = document.createElement("li"); //cria um elemento
+    t = minhaTarefa.value;
+    if (t != ""){
+      var li = document.createElement("li"); //cria um elemento
 
-    li.appendChild(document.createTextNode(temp));
-    ul.appendChild(li); //adiciona um elemento na ul
-    minhaTarefa.value="";
-    mapear(); //mapear sempre que adicionar elemento na lista
+      li.appendChild(document.createTextNode(t));
+      ul.appendChild(li); //adiciona um elemento na ul
+      minhaTarefa.value="";
+      mapear(); //mapear sempre que adicionar elemento na lista
+    }
+    else{
+      alert("Você deve adicionar uma tarefa!")
+    }
   });
 
   document.querySelector(".limpar").addEventListener("click", () => {

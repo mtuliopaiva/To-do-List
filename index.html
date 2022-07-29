@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="./img/favicon.png"/>
     <title>To do list</title>
     <link href="./normalize.css" rel="stylesheet" />
     <link href="./reset.css" rel="stylesheet" />
@@ -12,13 +13,18 @@
 <body> 
     <main> 
         <section class="cardTarefas">
-            <h1 class="meuTitulo" >Minhas tarefas</h1>
-            <input type="text" id="tarefa" required placeholder="Digite aqui sua tarefa">
-            <button class="adicionar">Adicionar</button>
-            <button class="limpar">Limpar</button>
-                
-            <ul id="minhaLista">
-            </ul>
+            <div class="logo">
+                <h1 class="meuTitulo" >Minhas tarefas</h1>
+                <img src="./img/lista.PNG" class="imagemLista">
+            </div>
+            <div class="principal">
+                <input type="text" id="tarefa" required placeholder="Digite aqui sua tarefa">
+                <button class="adicionar">Adicionar</button>
+                <button class="limpar">Limpar</button>
+                    
+                <ul id="minhaLista">
+                </ul>
+            </div>
         </section>
 
         <script src="./main.js"></script>   

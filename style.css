@@ -57,3 +57,13 @@ li:hover{
     color:#FFFFFF;
     transition: 1s;
 }
+@media screen and (max-width: 480px){ /*Para mobile*/
+	html, .cardTarefas, .meuTitulo, #tarefa, .adicionar, .limpar, #minhaLista, li {
+		width: auto;
+	}
+  .cardTarefas{
+    width: 300px;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+}

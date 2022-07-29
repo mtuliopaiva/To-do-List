@@ -2,6 +2,8 @@ const minhaTarefa = document.querySelector('input[type=text]'); //meu texto
 const lista = document.getElementById('minhaLista');
 
 
+
+
 document.querySelector(".adicionar").addEventListener("click", () => {
   
     t = minhaTarefa.value;

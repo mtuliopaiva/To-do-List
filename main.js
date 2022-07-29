@@ -1,18 +1,17 @@
 const minhaTarefa = document.querySelector('input[type=text]'); //meu texto
-const elemento = document.getElementById('minhaLista');
-
-var ul = document.querySelector("#minhaLista");//minha lista existente
+const lista = document.getElementById('minhaLista');
 
 
 document.querySelector(".adicionar").addEventListener("click", () => {
+  
     t = minhaTarefa.value;
     if (t != ""){
-      var li = document.createElement("li"); //cria um elemento
+      var li = document.createElement("li"); //cria um lista
 
       li.appendChild(document.createTextNode(t));
-      ul.appendChild(li); //adiciona um elemento na ul
+      lista.appendChild(li); //adiciona um lista na ul
       minhaTarefa.value="";
-      mapear(); //mapear sempre que adicionar elemento na lista
+      mapear(); //mapear sempre que adicionar lista na lista
     }
     else{
       alert("Você deve adicionar uma tarefa!")
@@ -21,21 +20,20 @@ document.querySelector(".adicionar").addEventListener("click", () => {
 
   document.querySelector(".limpar").addEventListener("click", () => {
     while(minhaLista != "" ){
-        ul.removeChild(ul.lastChild);
+        lista.removeChild(lista.lastChild);
     }
   });
-    
-    function mapear(){ // Função que mapeia a lista
-      for(let cont=0; cont < elemento.childElementCount; cont++){
-        if(elemento.children[cont].style.textDecoration == "line-through"){
 
-          elemento.children[cont].onclick = function(){
-            elemento.children[cont].style.textDecoration = "none";
+    function mapear(){ // Função que mapeia a lista
+      for(let cont=0; cont < lista.childElementCount; cont++){
+        if(lista.children[cont].style.textDecoration == "line-through"){
+          lista.children[cont].onclick = function(){
+            lista.children[cont].style.textDecoration = "none";
           }
         }
         else{
-          elemento.children[cont].onclick = function(){
-            elemento.children[cont].style.textDecoration = "line-through" //altera a text decoration do elemento da lista clicado para riscada
+          lista.children[cont].onclick = function(){
+            lista.children[cont].style.textDecoration = "line-through" //altera a text decoration do lista da lista clicado para riscada
           }
         }
       

@@ -64,6 +64,6 @@ li:hover{
 }
 @media screen and (max-width: 450px){ /*Ajuste para mobile*/
   .cardTarefas{
-    width: fit-content;
+    width: fit-content; /*Ajustando tamanho para caber na telas*/
   }
 }
